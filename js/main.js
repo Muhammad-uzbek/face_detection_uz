@@ -89,7 +89,7 @@ video.addEventListener("playing", () => {
         }
       function compliment(){
         let xushomad="";
-        if(gender=="male" && Math.round(interpolatedAge)<30 && (emotion=="neutral")){
+        if(gender=="male" && Math.round(interpolatedAge)<30 && (emotion=="neutral" || emotion=='happy')){
           xushomad=randomComplimentForBoy();
          }
          else if(gender=="female" && Math.round(interpolatedAge)<25){
@@ -103,9 +103,6 @@ video.addEventListener("playing", () => {
         }
         else if(gender=="female" && (emotion=="sad" || emotion=="angry")){
           xushomad="Nima bo'ldi, opa. Kim hafa qildi, ayting?🤨"
-        }
-        else if(emotion=="happy" && gender=="male"){
-          xushomad="Ha?, brat🤨. Kuydirgan kalladek kulyapsiz, o'zizcha";
         }
         else if(emotion=="happy" && gender=="female"){
           xushomad="Qolganlarga bilmadim-u, lekin sizga tabassum yarasharkan😉"
